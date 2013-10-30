@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="app/scripts/|app/scripts/controllers/|test/spec/controllers/" including="*|app/*|app/scripts/*|spp/scripts/**/*" kind="src" path=""/>
+	<classpathentry excluding="app/|test/spec/controllers/" including="*|app/scripts/*|spp/scripts/**/*" kind="src" path=""/>
 	<classpathentry excluding="controllers/" kind="src" path="app/scripts"/>
 	<classpathentry kind="src" path="app/scripts/controllers"/>
 	<classpathentry kind="src" path="test/spec/controllers"/>

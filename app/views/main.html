@@ -1,9 +1,19 @@
-<div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <h1>Démonstrateur Vidéo</h1>
+  <p>Sélectionnez la vidéo que vous souhaitez et regardez là au choix sur tablette ou sur écran.</p>
+  <p><a href="#" class="btn btn-primary btn-lg" role="button" ng-click="demonstration">Démonstration</a></p>
+</div>
+
+
+
+<div class="row theme-videos">
+  <div class="col-sm-6 col-md-3" ng-repeat="video in videos">
+    <a href="#" class="thumbnail" ng-click="showVideoInformation(video)">
+      <img ng-src="{{ video.image }}" alt="{{ video.name }}">
+      <div class="caption">
+        <h3>{{video.name}}</h3>
+      </div>
+    </a>
+  </div>
 </div>

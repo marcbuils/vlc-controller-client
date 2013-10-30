@@ -4,8 +4,7 @@ require.config({
         "underscore": "../bower_components/lodash/lodash",
         "jquery": "../bower_components/jquery/jquery",
         "angular": "../bower_components/angular/angular",
-
-        //build:js scripts/plugins.js
+        "angular-bootstrap": "../bower_components/angular-bootstrap/ui-bootstrap-tpls",
         "bootstrap-affix": "../bower_components/bootstrap-sass/js/affix",
         "bootstrap-alert": "../bower_components/bootstrap-sass/js/alert",
         "bootstrap-dropdown": "../bower_components/bootstrap-sass/js/dropdown",
@@ -18,8 +17,6 @@ require.config({
         "bootstrap-scrollspy": "../bower_components/bootstrap-sass/js/scrollspy",
         "bootstrap-collapse": "../bower_components/bootstrap-sass/js/collapse",
         "bootstrap-tab": "../bower_components/bootstrap-sass/js/tab",
-
-        //build:js scripts/modules.js
         "angular-resource": "../bower_components/angular-resource/angular-resource",
         "angular-cookies": "../bower_components/angular-cookies/angular-cookies",
         "angular-sanitize": "../bower_components/angular-sanitize/angular-sanitize"
@@ -35,21 +32,7 @@ require.config({
             exports: "jQuery"
         },
         "angular": {
-            exports: "angular",
-            deps: [
-                "bootstrap-affix",
-                "bootstrap-alert",
-                "bootstrap-dropdown",
-                "bootstrap-tooltip",
-                "bootstrap-modal",
-                "bootstrap-transition",
-                "bootstrap-button",
-                "bootstrap-popover",
-                "bootstrap-carousel",
-                "bootstrap-scrollspy",
-                "bootstrap-collapse",
-                "bootstrap-tab"
-            ]
+            exports: "angular"
         },
         "bootstrap-affix": {
             deps: ["jquery"]
@@ -86,6 +69,9 @@ require.config({
         },
         "bootstrap-tab": {
             deps: ["jquery"]
+        },
+        "angular-bootstrap": {
+            deps: ["angular"]
         }
     }
 });
@@ -94,7 +80,7 @@ require(["app", "controllers/main"], function (app) {
     "use strict";
 
     app
-        .config(function ($routeProvider) {
+        .config(["$routeProvider", function ($routeProvider) {
             $routeProvider
               .when("/", {
                 templateUrl: "views/main.html",
@@ -103,7 +89,7 @@ require(["app", "controllers/main"], function (app) {
               .otherwise({
                 redirectTo: "/"
               });
-      });
+      }]);
     
     angular.bootstrap(document, ['vlcControlerClientApp']);
 });

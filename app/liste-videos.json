@@ -1,4 +1,14 @@
 [
-	"/Users/marcbuils/Google Drive/Perso/video/cousinades_2013_compresse.mov",
-	"/Users/marcbuils/Google Drive/Perso/video/IMAGE_SGA_SD_compresse.mov"
+	{
+		"name": "Cousinades 2013",
+		"image": "images/logo_marcbuils_150-37.png",
+		"src": "/Users/marcbuils/Google Drive/Perso/video/cousinades_2013_compresse.mov",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+	},
+	{
+		"name": "IMAGE_SGA_SD",
+		"image": "images/logo_marcbuils_150-37.png",
+		"src": "/Users/marcbuils/Google Drive/Perso/video/IMAGE_SGA_SD_compresse.mov",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+	}
 ]
