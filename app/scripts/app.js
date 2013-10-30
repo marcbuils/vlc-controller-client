@@ -1,13 +1,5 @@
-'use strict';
-
-angular.module('vlcControlerClientApp', [])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+define(["angular"], function (angular) {
+    "use strict";
+    
+    return angular.module("vlcControlerClientApp", []);
+});
