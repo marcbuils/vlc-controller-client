@@ -5,14 +5,16 @@
 		    <h3>{{ video.name }}</h3>
 		</div>
 		<div class="modal-body">
-			<alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+			<alert class="animated flip" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
 			<div class="row">
 			    <div class="col-md-4">
 					<h4>Description</h4>
 					{{ video.description }}
 				</div>
 			    <div class="col-md-8">
-			    	<video></video>
+			    	<section class="center">
+			    		<iframe src="{{video.url}}" width="300" height="168" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			    	</section>
 			    	<button type="button" class="btn btn-primary btn-block" ng-click="playOnTV()">Envoyer sur l'écran</button>
 				</div>
 			</div>
