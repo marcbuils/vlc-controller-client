@@ -15,15 +15,6 @@ body {
   padding-bottom: 30px;
 }
 
-.theme-dropdown .dropdown-menu {
-  display: block;
-  position: static;
-  margin-bottom: 20px;
-}
-
-.container > p > .btn {
-  margin: 5px 0;
-}
 
 .theme-videos h3 {
   text-align: center;
@@ -43,4 +34,18 @@ body {
 .modal-header:after {
   display: table;
   content: " ";
+}
+
+@media (min-width: 1200px) {
+	.jumbotron {
+	  position: fixed;
+	  width: 360px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	.jumbotron {
+	  position: fixed;
+	  width: 293px;
+	}
 }
