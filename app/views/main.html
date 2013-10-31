@@ -3,13 +3,16 @@
     <div class="col-md-4">
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
-          <center>
+          <section class="center">
               <img alt="Marc Buils Consultant - Bureau d'étude RIA" class="img-rounded" src="images/logo_marcbuils.png">
               <span><b> - Bureau d'étude RIA</b></span>
-          </center>
-          <h2><i class="fa fa-video-camera"></i> Démonstrateur Vidéo</h2>
-          <p>Sélectionnez la vidéo que vous souhaitez et regardez là au choix sur tablette ou sur écran.</p>
-          <p><a href="#" class="btn btn-primary btn-lg" role="button" ng-click="demonstration">Démonstration</a></p>
+          </section>
+          <h2><i class="fa fa-film"></i> Lecteur Vidéo</h2>
+          <p>Sélectionnez la vidéo à lire puis sélectionnez au choix le support tablette ou écran.</p>
+          
+          <section class="center">
+          	<a href="#" class="btn btn-primary btn-lg" role="button" ng-click="demonstration">Démonstration</a></p>
+          </section>
         </div>
     </div>
     
@@ -20,7 +23,7 @@
             <a href="#" class="thumbnail" ng-click="showVideoInformation(video)">
               <img ng-src="{{ video.image }}" alt="{{ video.name }}">
               <div class="caption">
-                <h3>{{video.name}}</h3>
+                <h4>{{video.name}}</h4>
               </div>
             </a>
           </div>
