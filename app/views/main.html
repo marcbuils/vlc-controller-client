@@ -1,32 +1,31 @@
-
-<div class="row">
-    <div class="col-md-4">
+<section class="row theme-video">
+    <article class="col-md-4">
         <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <section class="center">
+        <section class="jumbotron">
+          <!-- <section class="center">
               <img alt="Marc Buils Consultant - Bureau d'étude RIA" class="img-rounded" src="images/logo_marcbuils.png">
               <span><b> - Bureau d'étude RIA</b></span>
-          </section>
+          </section> -->
           <h2><i class="fa fa-film"></i> Lecteur Vidéo</h2>
-          <p>Sélectionnez la vidéo à lire puis sélectionnez au choix le support tablette ou écran.</p>
+          <p>Bienvenue sur le salon Numéric Day.</p>
+          <p>Sélectionnez une vidéo et visionnez la sur le support de votre choix.</p>
           
-          <section class="center">
-          	<a href="#" class="btn btn-primary btn-lg" role="button" ng-click="showVideoInformation(videos[0])">Démonstration</a></p>
-          </section>
-        </div>
-    </div>
+          <!-- <section class="center">
+          	<a href="http://www.marcbuils.fr" class="btn btn-primary btn-lg" role="button">visitez notre site Internet</a></p>
+          </section> -->
+        </section>
+    </article>
     
-    
-    <div class="col-md-8">
-        <div class="row theme-videos">
-          <div class="col-sm-6 col-md-3" ng-repeat="video in videos">
-            <a href="#" class="thumbnail" ng-click="showVideoInformation(video)">
-              <img ng-src="{{ video.image }}" alt="{{ video.name }}">
-              <div class="caption">
-                <h4>{{video.name}}</h4>
-              </div>
+    <article class="col-md-8">
+        <div class="row">
+          <div class="col-md-6" data-ng-repeat="video in videos">
+            <a href="javascript:" class="thumbnail" data-ng-click="showVideoInformation(video)">
+              <img data-ng-src="{{ video.image }}" alt="{{ video.name }}">
+              <section class="caption">
+                <h4><i class="fa fa-chevron-right"></i> {{video.name}}</h4>
+              </section>
             </a>
           </div>
         </div>
-    </div>
-</div>
+    </article>
+</section>

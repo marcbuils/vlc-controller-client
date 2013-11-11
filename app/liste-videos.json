@@ -1,16 +1,37 @@
 [
 	{
-		"name": "Cousinades 2013",
-		"image": "images/logo_marcbuils.png",
-		"src": "cousinades_2013_compresse",
-		"url": "//player.vimeo.com/video/70840384",
+		"name": "eTIC47",
+		"image": "images/videos/etic47.png",
+		"src": "etic47",
+		"url": "//player.vimeo.com/video/78724726",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
 	},
 	{
-		"name": "IMAGE_SGA_SD",
-		"image": "images/logo_marcbuils.png",
-		"src": "IMAGE_SGA_SD_compresse",
+		"name": "Cartes virtuelles",
+		"image": "images/videos/vcard.png",
+		"src": "vcard",
+		"url": "//player.vimeo.com/video/78709324",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+	},
+	{
+		"name": "Nos activitées",
+		"image": "images/videos/activitees.png",
+		"src": "presentation-activitees",
+		"url": "//player.vimeo.com/video/78656193",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+	},
+	{
+		"name": "!Allons plus loin",
+		"image": "images/videos/allons-plus-loin.png",
+		"src": "nuages",
 		"url": "//player.vimeo.com/video/71053548",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+	},
+	{
+		"name": "!Présentation de l'entreprise",
+		"image": "images/videos/entreprise.png",
+		"src": "nuages",
+		"url": "//player.vimeo.com/video/70840384",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
 	}
 ]

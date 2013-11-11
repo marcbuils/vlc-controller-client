@@ -186,10 +186,10 @@ module.exports = function (grunt) {
       dist: {
         files: {
           src: [
-            '<%= yeoman.dist %>/scripts/{,*/}*.js',
+            '<%= yeoman.dist %>/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/styles/fonts/*'
+//            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+//            '<%= yeoman.dist %>/styles/fonts/*'
           ]
         }
       }
@@ -243,6 +243,8 @@ module.exports = function (grunt) {
     htmlmin: {
       dist: {
         options: {
+            removeComments: true,
+            collapseWhitespace: true
           /*removeCommentsFromCDATA: true,
           // https://github.com/yeoman/grunt-usemin/issues/44
           //collapseWhitespace: true,
@@ -272,9 +274,10 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-            'bower_components/**/*',
+            'liste-videos.json',
+//            'bower_components/**/*',
             'images/{,*/}*.{gif,webp}',
-            'styles/fonts/*'
+            'fonts/*'
           ]
         }, {
           expand: true,
@@ -333,14 +336,36 @@ module.exports = function (grunt) {
         }]
       }
     },
-    uglify: {
-      dist: {
-        files: {
-          '<%= yeoman.dist %>/scripts/scripts.js': [
-            '<%= yeoman.dist %>/scripts/scripts.js'
-          ]
+    requirejs: {
+        dist: {
+            options: {
+                optimize: 'none',
+                name: 'index',
+                mainConfigFile: 'app/scripts/index.js',
+                out: '<%= yeoman.dist %>/index.js',
+                include: [
+                    'almond'
+                ],
+                exclude: [
+                    'socket.io'
+                ],
+                wrap: {
+                    start: '(function () {',
+                    end: 'define("socket.io", function () { return io; }); require("index"); }());'
+                }
+            }
         }
-      }
+    },
+    'ftp-deploy': {
+        dist: {
+          auth: {
+            host: 'ftp.cluster015.ovh.net',
+            port: 21,
+            authKey: 'access'
+          },
+          src: '<%= yeoman.dist %>',
+          dest: 'vlc-controler-client'
+        }
     }
   });
 
@@ -370,6 +395,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'useminPrepare',
+    'requirejs:dist',
     'concurrent:dist',
     'autoprefixer',
     'concat',
@@ -377,7 +403,6 @@ module.exports = function (grunt) {
     'cdnify',
     'ngmin',
     'cssmin',
-    'uglify',
     'rev',
     'usemin'
   ]);
@@ -386,5 +411,10 @@ module.exports = function (grunt) {
     'jshint',
     'test',
     'build'
+  ]);
+  
+  grunt.registerTask('deploy', [
+    'build', 
+    'ftp-deploy:dist'
   ]);
 };

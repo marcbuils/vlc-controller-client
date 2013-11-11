@@ -1,4 +1,4 @@
-define(["angular", "app", "underscore", "controllers/modalVideoInformation"], function (angular, app, _) {
+define(["app", "underscore", "controllers/ModalVideoInformationCtrl"], function (app, _) {
     "use strict";
     
     app
@@ -11,7 +11,7 @@ define(["angular", "app", "underscore", "controllers/modalVideoInformation"], fu
               showVideoInformation: function (video) {
                   $modal.open({
                       templateUrl: "views/videoInformation.html",
-                      controller: "ModalVideoInformation",
+                      controller: "ModalVideoInformationCtrl",
                       resolve: {
                         video: function () {
                           return video;

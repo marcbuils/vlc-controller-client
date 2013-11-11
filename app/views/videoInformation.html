@@ -1,26 +1,29 @@
 <div class="modal-dialog">
 	<div class="modal-content">
 		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="close()">&times;</button>
-		    <h3>{{ video.name }}</h3>
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-ng-click="close()">&times;</button>
+		    <h3><i class="fa fa-chevron-right"></i> {{ video.name }}</h3>
 		</div>
 		<div class="modal-body">
-			<alert class="animated flip" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+			<alert class="animated flip" data-ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
 			<div class="row">
 			    <div class="col-md-4">
-					<h4>Description</h4>
+					<h4><i class="fa fa-book"></i> Description</h4>
 					{{ video.description }}
 				</div>
 			    <div class="col-md-8">
 			    	<section class="center">
-			    		<iframe src="{{video.url}}" width="300" height="168" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			    	</section>
-			    	<button type="button" class="btn btn-primary btn-block" ng-click="playOnTV()">Envoyer sur l'écran</button>
+			    		<iframe data-ng-src="{{trustSrc(video.url)}}" width="300" height="168" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				   	</section>
+				   	<section class=center>
+					   	<button type="button" class="btn btn-primary" data-ng-click="playOnTV()"><i class="fa fa-youtube-play"></i> téléviseur</button>
+					   	<button type="button" class="btn btn-primary" data-ng-click="playOnScreen()"><i class="fa fa-youtube-play"></i> écran transparent</button>
+				   	</section>
 				</div>
 			</div>
 		</div>
 		<div class="modal-footer">
-		    <button class="btn btn-warning" ng-click="close()">Fermer</button>
+		    <button class="btn btn-warning" data-ng-click="close()">Fermer</button>
 		</div>
 	</div>
 </div>

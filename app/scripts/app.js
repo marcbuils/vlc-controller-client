@@ -11,9 +11,16 @@ define([ "angular",
          "bootstrap-scrollspy", 
          "bootstrap-collapse", 
          "bootstrap-tab",
-         "angular-bootstrap" 
+         "angular-bootstrap",
+         "angular-route",
+         "angular-animate",
+         "angular-sanitize"
 ], function(angular) {
     "use strict";
 
-    return angular.module("vlcControlerClientApp", [ "ui.bootstrap" ]);
+    return angular
+        .module("vlcControlerClientApp", [ "ngRoute", "ngAnimate", "ngSanitize", "ui.bootstrap" ])
+        .config(function ($sceDelegateProvider) {
+            $sceDelegateProvider.resourceUrlWhitelist(['^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?\(vimeo|youtube)\.com(/.*)?$', 'self']);
+        });
 });

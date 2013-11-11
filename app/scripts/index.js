@@ -4,6 +4,9 @@ require.config({
         "underscore": "../bower_components/lodash/lodash",
         "jquery": "../bower_components/jquery/jquery",
         "angular": "../bower_components/angular/angular",
+        "angular-route": "../bower_components/angular-route/angular-route",
+        "angular-animate": "../bower_components/angular-animate/angular-animate",
+        "angular-sanitize": "../bower_components/angular-sanitize/angular-sanitize",
         "angular-bootstrap": "../bower_components/angular-bootstrap/ui-bootstrap-tpls",
         "bootstrap-affix": "../bower_components/bootstrap-sass/js/affix",
         "bootstrap-alert": "../bower_components/bootstrap-sass/js/alert",
@@ -19,7 +22,10 @@ require.config({
         "bootstrap-tab": "../bower_components/bootstrap-sass/js/tab",
         "angular-resource": "../bower_components/angular-resource/angular-resource",
         "angular-cookies": "../bower_components/angular-cookies/angular-cookies",
-        "angular-sanitize": "../bower_components/angular-sanitize/angular-sanitize"
+        "angular-sanitize": "../bower_components/angular-sanitize/angular-sanitize",
+        'jquery.center': "../bower_components/jquery.msg/jquery.center.min",
+        'jquery.msg': "../bower_components/jquery.msg/jquery.msg",
+        "almond": "../bower_components/almond/almond"
     },
     shim: {
         "socket.io": {
@@ -72,11 +78,26 @@ require.config({
         },
         "angular-bootstrap": {
             deps: ["angular"]
-        }
+        },
+        "angular-route": {
+            deps: ["angular"]
+        },
+        "angular-animate": {
+            deps: ["angular"]
+        },
+        "angular-sanitize": {
+            deps: ["angular"]
+        },
+        'jquery.center': {
+            deps: ['jquery']
+        },
+        'jquery.msg': {
+            deps: ['jquery', 'jquery.center']
+        },
     }
 });
 
-require(["app", "controllers/main"], function (app) {
+require(["app", "controllers/MainCtrl", "controllers/CommentCtrl", "controllers/ShareCtrl", "controllers/NavbarCtrl"], function (app) {
     "use strict";
 
     app
@@ -85,6 +106,14 @@ require(["app", "controllers/main"], function (app) {
               .when("/", {
                 templateUrl: "views/main.html",
                 controller: "MainCtrl"
+              })
+              .when("/votre-avis-nous-interesse", {
+                templateUrl: "views/comment.html",
+                controller: "CommentCtrl"
+              })
+              .when("/partagez-cette-application", {
+                templateUrl: "views/share.html",
+                controller: "ShareCtrl"
               })
               .otherwise({
                 redirectTo: "/"

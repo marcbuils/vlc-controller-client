@@ -13,25 +13,13 @@
 define([ 'underscore', 'socket.io' ], function(_, io) {
     "use strict";
 
-    var module = function() {
-        if (!module._initialized) {
-            module._initialize();
-            module._initialized = true;
-        }
-
-        return module;
-    };
-
-    _.extend(module, {
-        _initialized : false,
+    var module = {
         _socket : null,
 
-        _initialize : function() {
-            this._connecter();
-        },
-
-        _connecter : function() {
-            this._socket = io.connect('http://localhost:8081');
+        connecter : function(server) {
+            this._socket = io.connect(server);
+            
+            return this;
         },
 
         // *** play(cheminVideo) ***
@@ -44,8 +32,10 @@ define([ 'underscore', 'socket.io' ], function(_, io) {
             this._socket.emit('play', {
                 input : cheminVideo
             });
+            
+            return this;
         }
-    });
+    };
 
     return module;
 });
