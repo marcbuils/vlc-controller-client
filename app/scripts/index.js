@@ -22,7 +22,6 @@ require.config({
         "bootstrap-tab": "../bower_components/bootstrap-sass/js/tab",
         "angular-resource": "../bower_components/angular-resource/angular-resource",
         "angular-cookies": "../bower_components/angular-cookies/angular-cookies",
-        "angular-sanitize": "../bower_components/angular-sanitize/angular-sanitize",
         'jquery.center': "../bower_components/jquery.msg/jquery.center.min",
         'jquery.msg': "../bower_components/jquery.msg/jquery.msg",
         "almond": "../bower_components/almond/almond"
