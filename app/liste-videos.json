@@ -40,5 +40,12 @@
 		"src": "nos-clients-compresse",
 		"url": "//player.vimeo.com/video/79251130",
 		"description": "Présentation des clients que nous avons accompagné lors de nos missions dans le domaine des RIA (Javascript / HTML5 / CSS3)."
+	},
+	{
+		"name": "Impression 3D",
+		"image": "images/videos/impression-3D.png",
+		"src": "imprimante-3d-compresse",
+		"url": "//player.vimeo.com/video/79257054",
+		"description": "Démonstration d'une impression 3D d'un sifflet. Cette imprimante nous sert principalement au prototypage de supports de communication physiques."
 	}
 ]
