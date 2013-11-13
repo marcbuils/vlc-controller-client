@@ -48,7 +48,9 @@ define(["app", "underscore", "VlcControllerClient"], function (app, _, VlcContro
              // @return undefined
              //
              closeAlert: function (index) {
+                 console.log('ici', $scope.alerts);
                  $scope.alerts.splice(index, 1);
+                 console.log('ici2', $scope.alerts);
              }
           });
         }]);
