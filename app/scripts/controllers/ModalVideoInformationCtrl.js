@@ -10,7 +10,6 @@ define(["app", "underscore", "VlcControllerClient"], function (app, _, VlcContro
     app
       .controller("ModalVideoInformationCtrl", ["$scope", "$modalInstance", "$sce", "video", function ($scope, $modalInstance, $sce, video) {
           var vlcControllerClientTV = Object.create(VlcControllerClient).connecter('http://sandbox.marcbuils.fr:8081');
-          var vlcControllerClientScreen = Object.create(VlcControllerClient).connecter('http://sandbox.marcbuils.fr:8082');
           
           _.extend($scope, {
              alerts: [],
@@ -38,20 +37,7 @@ define(["app", "underscore", "VlcControllerClient"], function (app, _, VlcContro
                  vlcControllerClientTV.play($scope.video.src);
                  $scope.alerts = [{
                      type: "success",
-                     msg: "La vidéo a été envoyée sur le téléviseur"
-                 }];
-             },
-             
-             // *** playOnScreen() ***
-             // Lit la vidéo demandée sur l'écran.
-             // 
-             // @return undefined
-             //
-             playOnScreen: function () {
-                 vlcControllerClientScreen.play($scope.video.src);
-                 $scope.alerts = [{
-                     type: "success",
-                     msg: "La vidéo a été envoyée sur l'écran transparent"
+                     msg: "La vidéo a été envoyée sur l'écran"
                  }];
              },
              
