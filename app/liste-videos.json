@@ -2,36 +2,43 @@
 	{
 		"name": "eTIC47",
 		"image": "images/videos/etic47.png",
-		"src": "etic47",
+		"src": "etic47-compresse",
 		"url": "//player.vimeo.com/video/78724726",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+		"description": "Marc BUILS Consultant est membre de l'association eTIC47, label de compétences TIC du département."
 	},
 	{
 		"name": "Cartes virtuelles",
 		"image": "images/videos/vcard.png",
-		"src": "vcard",
+		"src": "vcard-compresse",
 		"url": "//player.vimeo.com/video/78709324",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+		"description": "Vos cartes de visite se perdent trop facilement ? Ici, vous trouverez une démonstration de la vcard - Carte de visite électronique."
 	},
 	{
-		"name": "Nos activitées",
-		"image": "images/videos/activitees.png",
-		"src": "presentation-activitees",
+		"name": "Nos activités",
+		"image": "images/videos/activites.png",
+		"src": "presentation-activites-compresse",
 		"url": "//player.vimeo.com/video/78656193",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+		"description": "Vous avez un projet ? Nos services vont du conseil au développement, en passant par l'intégration et la gestion d'équipe ; mais quelque soit la mission, nous gardons toujours la même idée en tête: Une informatique efficace est avant tout une informatique intuitive."
 	},
 	{
-		"name": "!Allons plus loin",
+		"name": "Allons plus loin",
 		"image": "images/videos/allons-plus-loin.png",
-		"src": "nuages",
+		"src": "presentation-entreprise-compresse",
 		"url": "//player.vimeo.com/video/71053548",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+		"description": "Présentation des technologies RIA pour de nouveaux supports tels que les écrans transparents, les imprimantes 3D ou les interfaces sans contact."
 	},
 	{
-		"name": "!Présentation de l'entreprise",
+		"name": "Présentation de l'entreprise",
 		"image": "images/videos/entreprise.png",
-		"src": "nuages",
+		"src": "site-internet-compresse",
 		"url": "//player.vimeo.com/video/70840384",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+		"description": "Marc Buils Consultant est un bureau d'étude spécialisé dans les Applications Riches basées sur les technologies Internet (RIA) et les interfaces interactives. Notre objectif est d'accompagner les entreprises dans l'étude, la mise en place et la réalisation de leurs outils de communication."
+	},
+	{
+		"name": "Présentation de nos clients",
+		"image": "images/videos/clients.png",
+		"src": "nos-clients-compresse",
+		"url": "//player.vimeo.com/video/79251130",
+		"description": "Présentation des clients que nous avons accompagné lors de nos missions dans le domaine des RIA (Javascript / HTML5 / CSS3)."
 	}
 ]
