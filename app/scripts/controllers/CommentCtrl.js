@@ -3,7 +3,7 @@ define(["app", "underscore", "CommentManager", "jquery.msg"], function (app, _, 
     
     app
       .controller("CommentCtrl", ["$scope", function ($scope) {
-          var commentManager = Object.create(CommentManager).connect('http://sandbox.marcbuils.fr:8083');
+          var commentManager = Object.create(CommentManager);
           
           _.extend($scope, {
               vote: function (vote) {

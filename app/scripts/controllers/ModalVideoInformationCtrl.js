@@ -25,6 +25,7 @@ define(["app", "underscore", "VlcControllerClient"], function (app, _, VlcContro
              // @return undefined
              //
              close: function () {
+                 window._gaq.push(['_trackEvent', 'video', 'close', $scope.video.src]);
                  $modalInstance.close();
              },
              
@@ -34,10 +35,12 @@ define(["app", "underscore", "VlcControllerClient"], function (app, _, VlcContro
              // @return undefined
              //
              playOnTV: function () {
+                 window._gaq.push(['_trackEvent', 'video', 'play', $scope.video.src]);
+                 
                  vlcControllerClientTV.play($scope.video.src);
                  $scope.alerts = [{
                      type: "success",
-                     msg: "La vidéo a été envoyée sur l'écran"
+                     msg: "La vidéo a été envoyée sur le téléviseur"
                  }];
              },
              
@@ -48,9 +51,8 @@ define(["app", "underscore", "VlcControllerClient"], function (app, _, VlcContro
              // @return undefined
              //
              closeAlert: function (index) {
-                 console.log('ici', $scope.alerts);
+                 window._gaq.push(['_trackEvent', 'video', 'closeAlert', $scope.video.src]);
                  $scope.alerts.splice(index, 1);
-                 console.log('ici2', $scope.alerts);
              }
           });
         }]);
